@@ -1,5 +1,5 @@
 """
-WSGI config for seting project.
+WSGI config for hong project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'seting.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hong.settings')
 
 application = get_wsgi_application()
