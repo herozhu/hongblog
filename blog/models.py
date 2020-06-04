@@ -20,7 +20,7 @@ class Tag(models.Model):
     name = models.CharField('文章标签', max_length=50)
 
     class Meta:
-        verbose_name = '文章标签',
+        verbose_name = '文章标签'
         verbose_name_plural = verbose_name
 
     def __str__(self):
@@ -32,7 +32,7 @@ class Tui(models.Model):
     name = models.CharField('推荐位', max_length=100)
 
     class Meta:
-        verbose_name = '推荐位',
+        verbose_name = '推荐位'
         verbose_name_plural = verbose_name
 
     def __str__(self):
