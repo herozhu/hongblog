@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+# 头部增加这行代码导入UEditorField
+from DjangoUeditor.models import UEditorField
 
 
 # 文章分类
@@ -48,9 +50,10 @@ class Article(models.Model):
     # 使用外键关联标签表与标签是多对多关系
     tags = models.ManyToManyField(Tag, verbose_name='标签', blank=True)
     img = models.ImageField(upload_to='article_img/%Y/%m/%d/', verbose_name='文章图片', blank=True, null=True)
-    body = models.TextField()
+    body = UEditorField('内容', width=800, height=500, toolbars="full", imagePath="upimg/", filePath="upfile/", upload_settings={"imageMaxSize": 1204000},
+                        settings={}, command=None, blank=True)
     """
-             文章作者，这里User是从django.contrib.auth.models导入的.
+             文章作者，这里User是从django.contrib.auth.models导入的。
              这里我们通过 ForeignKey 把文章和 User 关联了起来。
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='作者')

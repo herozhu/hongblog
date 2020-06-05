@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from blog import views
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.hello)
+    path('', views.hello),
+    path(r'^ueditor/', include('DjangoUeditor.urls')),  # 添加DjangoUeditor的URL
 ]
