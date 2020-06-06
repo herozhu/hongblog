@@ -1,21 +1,3 @@
-Metadata-Version: 2.1
-Name: six
-Version: 1.15.0
-Summary: Python 2 and 3 compatibility utilities
-Home-page: https://github.com/benjaminp/six
-Author: Benjamin Peterson
-Author-email: benjamin@python.org
-License: MIT
-Platform: UNKNOWN
-Classifier: Development Status :: 5 - Production/Stable
-Classifier: Programming Language :: Python :: 2
-Classifier: Programming Language :: Python :: 3
-Classifier: Intended Audience :: Developers
-Classifier: License :: OSI Approved :: MIT License
-Classifier: Topic :: Software Development :: Libraries
-Classifier: Topic :: Utilities
-Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*
-
 .. image:: https://img.shields.io/pypi/v/six.svg
    :target: https://pypi.org/project/six/
    :alt: six on PyPI
@@ -45,5 +27,3 @@ Online documentation is at https://six.readthedocs.io/.
 
 Bugs can be reported to https://github.com/benjaminp/six.  The code can also
 be found there.
-
-
