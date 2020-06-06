@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ sitename }}</title>
 </head>
-<body>
+
+<h1>网站名称：{{ sitename }}</h1>
+<h1>网站地址： {{ url }}</h1>
+
+
+<ul>
+<h2>数据库里面的文章</h2>
+    {% for article in allarticle %}
+    <li>    标题：{{ article.title }}<br />
+            栏目：{{ article.category }}<br />
+            作者：{{ article.user }}<br />
+            时间：{{ article.created_time }}<br /></li>
+    {% endfor %}
+
+</ul>
 
 </body>
 </html>
