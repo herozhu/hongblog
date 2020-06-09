@@ -1,0 +1,18 @@
+<section class="widget post-right-item"><h4 class="post-right-title">热门推荐</h4>
+                <ul class="post-new">
+                {% for r in remen %}
+                        <li>
+                            <div class="img">
+                                <a href="{% url 'index' %}show-{{ r.id }}" title="{{ r.title}}"><img src="{% url 'index' %}media/{{ r.img }}"
+                                                                       srcset="{% url 'index' %}media/{{ r.img }}" alt="{{ r.title}}"
+                                                                       class="wp-post-image" width="120"
+                                                                       height="80"/></a>
+                            </div>
+                            <div class="text">
+                                <a href="{% url 'index' %}show-{{ r.id }}" title="{{ r.title}}" target="_blank">{{ r.title}}</a>
+                            </div>
+                        </li>
+                {% endfor %}
+
+                </ul>
+            </section>
