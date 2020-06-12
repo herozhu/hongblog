@@ -3,13 +3,12 @@
                 {% for r in remen %}
                         <li>
                             <div class="img">
-                                <a href="{% url 'index' %}show-{{ r.id }}" title="{{ r.title}}"><img src="{% url 'index' %}media/{{ r.img }}"
-                                                                       srcset="{% url 'index' %}media/{{ r.img }}" alt="{{ r.title}}"
-                                                                       class="wp-post-image" width="120"
-                                                                       height="80"/></a>
+                                <a href="{% url 'index' %}show-{{ r.id }}.html" title="{{ r.title}}">
+                                    <img src="{% url 'index' %}media/{{ r.img }}" srcset="{% url 'index' %}media/{{ r.img }}"
+                                         alt="{{ r.title}}" class="wp-post-image" width="120" height="80"/></a>
                             </div>
                             <div class="text">
-                                <a href="{% url 'index' %}show-{{ r.id }}" title="{{ r.title}}" target="_blank">{{ r.title}}</a>
+                                <a href="{% url 'index' %}show-{{ r.id }}.html" title="{{ r.title}}" target="_blank">{{ r.title}}</a>
                             </div>
                         </li>
                 {% endfor %}

@@ -1,4 +1,5 @@
 {% extends "default/common/base.html" %}
+{% load static %}
 {% block content %}
     <div id="main-container" class="container clearfix">
         <section class="post-left">
@@ -82,48 +83,27 @@
                 <ol class="hot-list">
 
                     {% for h in hot %}
-                        <li><a href="{% url 'index' %}list-{{ h.id }}" title="{{ h.title }}">{{ h.title }}</a></li>
+                        <li><a href="{% url 'index' %}show-{{ h.id }}.html" title="{{ h.title }}">{{ h.title }}</a></li>
                     {% endfor %}
 
                 </ol>
             </section>
-            <section class="widget post-right-item"><h4 class="post-right-title">所有标签</h4>
-                <div class="tags">
 
-                    {% for tag in tags %}
-                        <a href="{% url 'index' %}tag/{{ tag.name }}">{{ tag.name }}</a>
-                    {% endfor %}
+            <!-- /标签页 -->
+            {% include 'default/common/tag.html' %}
 
-                </div>
-            </section>
-            </section><!-- /关注我们 -->
-            <div class="post-right-item">
-                <h4 class="post-right-title">关注我们</h4>
-                <div class="wid-about">
-                    <p>拓普Python学院，欢迎关注！</p>
-                    <img src="static/picture/weixinqr.jpg" alt="微信二维码-互联网的一些事" width="160" height="160">
-                </div>
-                <div class="wid-about">
-                    <p><strong>联系方式:</strong></p>
-                    <p>QQ:445813</p>
-                    <p>Email：445813@qq.com</p>
-                </div>
-            </div>
+            <!-- /关注我们 -->
+
+        {% include 'default/common/follow.html' %}
 
         </aside>
         <div class="FriendLink hidden-xs clearfix">
             <div class="title"><h3>友情链接：</h3></div>
             <ul class="clears">
 
-                    <li><a href="https://www.django.cn/" target="_blank">Django中文网</a></li>
-
-                    <li><a href="https://www.django.cn/" target="_blank">django</a></li>
-
-                    <li><a href="https://www.python.top" target="_blank">PythonTOP</a></li>
-
-                    <li><a href="https://www.django.cn/course/" target="_blank">Django教程</a></li>
-
-                    <li><a href="https://www.django.cn/forum/" target="_blank">Django社区</a></li>
+                {% for l in link %}
+                 <li><a href="{{ l.link_url }}" target="_blank">{{ l.name }}</a></li>
+                {% endfor %}
 
             </ul>
         </div>
