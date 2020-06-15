@@ -3,7 +3,7 @@
                 <div class="tags">
 
                 {% for tag in tags %}
-                        <a href="{% url 'index' %}tag/{{ tag.name }}.html">{{ tag.name }}</a>
+                        <a href="{% url 'index' %}tag/{{ tag.name }}">{{ tag.name }}</a>
                 {% endfor %}
 
                 </div>

@@ -37,7 +37,7 @@
 
 </ul>
 </nav>
-    <form method="get" class="index-search  hidden-xs" action="/s/" >
+    <form method="get" class="index-search  hidden-xs" action="{% url 'index' %}s/" >
         <input class="text" name="search" type="text" placeholder="输入关键字" value="">
         <button class="submit" type="submit"><i class="fa fa-search"></i></button>
     </form>
@@ -50,8 +50,8 @@
 <!-- 底部 -->
 <footer class="footer">
 <div class="copyright"> © 2010- 2018 · All Rights Reserved
-    · <a href="https://www.django.cn">Django中文网</a>
-    · <a href="http://www.miibeian.gov.cn" target="_blank">湘ICP备17023990号</a> 版权所有 © Django中文网</div>
+    · <a href="/">Django中文网</a>
+    · <a href="http://www.miibeian.gov.cn" target="_blank"></a> 版权所有 © </div>
 </footer>
 <script src="static/js/bundle.js"></script>
 <script type="text/javascript" src="{% static "js/view-history.js" %}/"></script>
